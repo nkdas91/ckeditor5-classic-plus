@@ -3,6 +3,7 @@
 #### Note:
 
 **This is a custom build of CKEditor 5 with Simple Upload Adapter Plugin.**
+>It is important that you use the stable branch of a build, not the master branch. The master branch might contain changes which are not yet compatible with the versions of CKEditor 5 source packages that were published on npm.
 
 ## Documentation
 
@@ -31,33 +32,33 @@ import CKEditor from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "ckeditor5-build-classic-simple-upload-adapter";
 
 export default function MyEditor() {
-	const [article, setArticle] = useState();
+  const [article, setArticle] = useState();
+  
+  return (
+    <CKEditor
+      editor={ClassicEditor}
+      data={article}
+      onInit={editor => {
+        // You can store the "editor" and use when it is needed.
+      }}
+      onChange={(event, editor) => {
+        const data = editor.getData();
+        setArticle(data);
+      }}
+      config={{
+        simpleUpload: {
+          // The URL that the images are uploaded to.
+          uploadUrl: "http://example.com",
 
-	return (
-		<CKEditor
-			editor={ClassicEditor}
-			data={article}
-			onInit={editor => {
-				// You can store the "editor" and use when it is needed.
-			}}
-			onChange={(event, editor) => {
-				const data = editor.getData();
-				setArticle(data);
-			}}
-			config={{
-				simpleUpload: {
-					// The URL that the images are uploaded to.
-					uploadUrl: "http://example.com",
-
-					// Headers sent along with the XMLHttpRequest to the upload server.
-					headers: {
-						"X-CSRF-TOKEN": "CSFR-Token",
-						Authorization: "Bearer <JSON Web Token>"
-					}
-				}
-			}}
-		/>
-	);
+          // Headers sent along with the XMLHttpRequest to the upload server.
+          headers: {
+            "X-CSRF-TOKEN": "CSFR-Token",
+            Authorization: "Bearer <JSON Web Token>"
+          }
+        }
+      }}
+    />
+  );
 }
 ```
 
@@ -76,25 +77,25 @@ import ClassicEditor from 'ckeditor5-build-classic-simple-upload-adapter';
 // const ClassicEditor = require('ckeditor5-build-classic-simple-upload-adapter');
 
 ClassicEditor
-	.create(document.querySelector('#editor'))
-    config={{
-		simpleUpload: {
-          // The URL that the images are uploaded to.
-          uploadUrl: "http://example.com",
+  .create(document.querySelector('#editor'))
+  config={{
+    simpleUpload: {
+      // The URL that the images are uploaded to.
+      uploadUrl: "http://example.com",
 
-          // Headers sent along with the XMLHttpRequest to the upload server.
-          headers: {
-            "X-CSRF-TOKEN": "CSFR-Token",
-            Authorization: "Bearer <JSON Web Token>"
-          }
-        }
-	}}
-	.then( editor => {
-		window.editor = editor;
-	})
-	.catch( err => {
-		console.error(err.stack);
-	});
+      // Headers sent along with the XMLHttpRequest to the upload server.
+      headers: {
+        "X-CSRF-TOKEN": "CSFR-Token",
+        Authorization: "Bearer <JSON Web Token>"
+      }
+    }
+  }}
+  .then( editor => {
+    window.editor = editor;
+  })
+  .catch( err => {
+    console.error(err.stack);
+  });
 ```
 
 ### HTML
@@ -107,28 +108,28 @@ npm i ckeditor5-build-classic-simple-upload-adapter
 
 ```html
 <div id="editor">
-	<p>This is the editor content.</p>
+  <p>This is the editor content.</p>
 </div>
 <script src="./node_modules/ckeditor5-build-classic-simple-upload-adapter/build/ckeditor.js"></script>
 <script>
-	ClassicEditor.create(document.querySelector("#editor"), {
-		simpleUpload: {
-			// The URL that the images are uploaded to.
-			uploadUrl: "http://example.com/",
+  ClassicEditor.create(document.querySelector("#editor"), {
+    simpleUpload: {
+      // The URL that the images are uploaded to.
+      uploadUrl: "http://example.com/",
 
-			// Headers sent along with the XMLHttpRequest to the upload server.
-			headers: {
-				"X-CSRF-TOKEN": "CSFR-Token",
-				Authorization: "Bearer <JSON Web Token>"
-			}
-		}
-	})
-		.then(editor => {
-			window.editor = editor;
-		})
-		.catch(err => {
-			console.error(err.stack);
-		});
+      // Headers sent along with the XMLHttpRequest to the upload server.
+      headers: {
+        "X-CSRF-TOKEN": "CSFR-Token",
+        Authorization: "Bearer <JSON Web Token>"
+      }
+    }
+  })
+  .then(editor => {
+    window.editor = editor;
+  })
+  .catch(err => {
+    console.error(err.stack);
+  });
 </script>
 ```
 
