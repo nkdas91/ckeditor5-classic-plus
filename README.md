@@ -8,55 +8,72 @@
 
 Please check CKEditor 5 Editor official documentation:
 
--   [Installation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html) for how to install this package and what it contains.
--   [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html) for how to create an editor and interact with it.
--   [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html) for how to configure the editor.
--   [Creating custom builds](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) for how to customize the build (configure and rebuild the editor bundle).
+-   [Documentation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html)
+-   [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html)
+-   [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html)
+-   [Creating custom builds](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html)
+-   [React](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html)
 
 ## Quick start
 
-First, install the build from npm:
+### React
+
+Installation
 
 ```bash
-npm install --save @ckeditor/ckeditor5-build-classic-simple-upload-adapter
+npm i @ckeditor/ckeditor5-react
+npm i ckeditor5-build-classic-simple-upload-adapter
 ```
-
-And use it in your website:
-
-```html
-<div id="editor">
-	<p>This is the editor content.</p>
-</div>
-<script src="./node_modules/@ckeditor/ckeditor5-build-classic-simple-upload-adapter/build/ckeditor.js"></script>
-<script>
-	ClassicEditor.create(document.querySelector("#editor"), {
-		simpleUpload: {
-			// The URL that the images are uploaded to.
-			uploadUrl: "http://example.com/",
-
-			// Headers sent along with the XMLHttpRequest to the upload server.
-			headers: {
-				"X-CSRF-TOKEN": "CSFR-Token",
-				Authorization: "Bearer <JSON Web Token>"
-			}
-		}
-	})
-		.then(editor => {
-			window.editor = editor;
-		})
-		.catch(err => {
-			console.error(err.stack);
-		});
-</script>
-```
-
-Or in your JavaScript application:
 
 ```js
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic-simple-upload-adapter';
+import React, { useState } from "react";
+import CKEditor from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "ckeditor5-build-classic-simple-upload-adapter";
+
+export default function MyEditor() {
+	const [article, setArticle] = useState();
+
+	return (
+		<CKEditor
+			editor={ClassicEditor}
+			data={article}
+			onInit={editor => {
+				// You can store the "editor" and use when it is needed.
+			}}
+			onChange={(event, editor) => {
+				const data = editor.getData();
+				setArticle(data);
+			}}
+			config={{
+				simpleUpload: {
+					// The URL that the images are uploaded to.
+					uploadUrl: "http://example.com",
+
+					// Headers sent along with the XMLHttpRequest to the upload server.
+					headers: {
+						"X-CSRF-TOKEN": "CSFR-Token",
+						Authorization: "Bearer <JSON Web Token>"
+					}
+				}
+			}}
+		/>
+	);
+}
+```
+
+### JS
+
+Installation
+
+```bash
+npm i ckeditor5-build-classic-simple-upload-adapter
+```
+
+```js
+import ClassicEditor from 'ckeditor5-build-classic-simple-upload-adapter';
 
 // Or using the CommonJS version:
-// const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic-simple-upload-adapter' );
+// const ClassicEditor = require('ckeditor5-build-classic-simple-upload-adapter');
 
 ClassicEditor
 	.create(document.querySelector('#editor'))
@@ -80,8 +97,39 @@ ClassicEditor
 	});
 ```
 
+### HTML
+
+Installation
+
+```bash
+npm i ckeditor5-build-classic-simple-upload-adapter
+```
+
+```html
+<div id="editor">
+	<p>This is the editor content.</p>
+</div>
+<script src="./node_modules/ckeditor5-build-classic-simple-upload-adapter/build/ckeditor.js"></script>
+<script>
+	ClassicEditor.create(document.querySelector("#editor"), {
+		simpleUpload: {
+			// The URL that the images are uploaded to.
+			uploadUrl: "http://example.com/",
+
+			// Headers sent along with the XMLHttpRequest to the upload server.
+			headers: {
+				"X-CSRF-TOKEN": "CSFR-Token",
+				Authorization: "Bearer <JSON Web Token>"
+			}
+		}
+	})
+		.then(editor => {
+			window.editor = editor;
+		})
+		.catch(err => {
+			console.error(err.stack);
+		});
+</script>
+```
+
 **Note:** If you are planning to integrate CKEditor 5 deep into your application, it is actually more convenient and recommended to install and import the source modules directly (like it happens in `ckeditor.js`). Read more in the [Advanced setup guide](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html).
-
-## License
-
-Licensed under the terms of [GNU General Public License Version 2 or later](http://www.gnu.org/licenses/gpl.html). For full details about the license, please check the `LICENSE.md` file or [https://ckeditor.com/legal/ckeditor-oss-license](https://ckeditor.com/legal/ckeditor-oss-license).

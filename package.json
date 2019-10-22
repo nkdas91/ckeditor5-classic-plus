@@ -1,5 +1,5 @@
 {
-	"name": "@ckeditor/ckeditor5-build-classic-simple-upload-adapter",
+	"name": "ckeditor5-build-classic-simple-upload-adapter",
 	"version": "1.0.0",
 	"description": "CKEditor 5 with simple upload adapter.",
 	"keywords": [
