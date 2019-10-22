@@ -40,40 +40,10 @@
 
 		<script src="../build/ckeditor.js"></script>
 		<script>
-			var t = ClassicEditor.builtinPlugins.map(
-				plugin => plugin.pluginName
-			);
-
-			// console.log(t);
-
 			ClassicEditor.create(document.querySelector("#editor"), {
-				plugins: [
-					"Essentials",
-					"CKFinderUploadAdapter",
-					"Autoformat",
-					"Bold",
-					"Italic",
-					"BlockQuote",
-					"CKFinder",
-					"EasyImage",
-					"Heading",
-					"Image",
-					"ImageCaption",
-					"ImageStyle",
-					"ImageToolbar",
-					"ImageUpload",
-					"Link",
-					"List",
-					"MediaEmbed",
-					"Paragraph",
-					"PasteFromOffice",
-					"Table",
-					"TableToolbar",
-					"SimpleUploadAdapter"
-				],
 				simpleUpload: {
 					// The URL that the images are uploaded to.
-					uploadUrl: "http://localhost:3001/",
+					uploadUrl: "http://example.com/",
 
 					// Headers sent along with the XMLHttpRequest to the upload server.
 					headers: {
