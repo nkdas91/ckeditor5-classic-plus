@@ -77,9 +77,8 @@ import ClassicEditor from 'ckeditor5-build-classic-simple-upload-adapter';
 // const ClassicEditor = require('ckeditor5-build-classic-simple-upload-adapter');
 
 ClassicEditor
-  .create(document.querySelector('#editor'))
-  config={{
-    simpleUpload: {
+  .create(document.querySelector('#editor'), {
+  simpleUpload: {
       // The URL that the images are uploaded to.
       uploadUrl: "http://example.com",
 
@@ -89,7 +88,7 @@ ClassicEditor
         Authorization: "Bearer <JSON Web Token>"
       }
     }
-  }}
+  })
   .then( editor => {
     window.editor = editor;
   })
