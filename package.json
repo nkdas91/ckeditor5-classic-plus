@@ -1,6 +1,6 @@
 {
 	"name": "ckeditor5-classic-plus",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "CKEditor 5 - Build Classic with Simple Upload Adapter and Code Block plugin",
 	"keywords": [
 		"ckeditor5-build",
