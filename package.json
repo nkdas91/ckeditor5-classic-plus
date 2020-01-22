@@ -1,6 +1,6 @@
 {
 	"name": "ckeditor5-classic-plus",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "CKEditor 5 - Build Classic with Simple Upload Adapter and Code Block plugin",
 	"keywords": [
 		"ckeditor5-build",
@@ -23,7 +23,9 @@
     "code block",
     "ckeditor5-build-classic",
     "ckeditor5-build-classic-plus",
-    "ckeditor5-classic-plus"
+    "ckeditor5-classic-plus",
+    "ckeditor5-react",
+    "wysiwyg for React"
 	],
 	"main": "./build/ckeditor.js",
 	"files": [

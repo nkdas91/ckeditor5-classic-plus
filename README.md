@@ -1,4 +1,5 @@
-# CKEditor 5 - Classic Plus
+# CKEditor 5 Build - Classic Plus
+[![npm version](https://badge.fury.io/js/ckeditor5-classic-plus.svg)](https://badge.fury.io/js/ckeditor5-classic-plus)
 
 ### Very Important Notes:
 
@@ -17,13 +18,13 @@ Installation
 
 ```bash
 npm i @ckeditor/ckeditor5-react
-npm i ckeditor5-classic-plus
+npm i ckeditor5-build-classic-simple-upload-adapter
 ```
 
 ```js
 import React, { useState } from "react";
 import CKEditor from "@ckeditor/ckeditor5-react";
-import ClassicEditor from "ckeditor5-classic-plus";
+import ClassicEditor from "ckeditor5-build-classic-simple-upload-adapter";
 
 export default function MyEditor() {
   const [article, setArticle] = useState();
@@ -61,14 +62,14 @@ export default function MyEditor() {
 Installation
 
 ```bash
-npm i ckeditor5-classic-plus
+npm i ckeditor5-build-classic-simple-upload-adapter
 ```
 
 ```js
-import ClassicEditor from 'ckeditor5-classic-plus';
+import ClassicEditor from 'ckeditor5-build-classic-simple-upload-adapter';
 
 // Or using the CommonJS version:
-// const ClassicEditor = require('ckeditor5-classic-plus');
+// const ClassicEditor = require('ckeditor5-build-classic-simple-upload-adapter');
 
 ClassicEditor
   .create(document.querySelector('#editor'), {
@@ -96,14 +97,14 @@ ClassicEditor
 Installation
 
 ```bash
-npm i ckeditor5-classic-plus
+npm i ckeditor5-build-classic-simple-upload-adapter
 ```
 
 ```html
 <div id="editor">
   <p>This is the editor content.</p>
 </div>
-<script src="./node_modules/ckeditor5-classic-plus/build/ckeditor.js"></script>
+<script src="./node_modules/ckeditor5-build-classic-simple-upload-adapter/build/ckeditor.js"></script>
 <script>
   ClassicEditor.create(document.querySelector("#editor"), {
     simpleUpload: {
