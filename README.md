@@ -1,19 +1,13 @@
-# CKEditor 5 classic with Simple Upload Adapter
+# CKEditor 5 Build - Classic Plus
 
-#### Note:
+### Very Important Notes:
 
-**This is a custom build of CKEditor 5 with Simple Upload Adapter Plugin.**
->It is important that you use the stable branch of a build, not the master branch. The master branch might contain changes which are not yet compatible with the versions of CKEditor 5 source packages that were published on npm.
+- **This is a CUSTOM BUILD of CKEditor 5 Build - Classic with Simple Upload Adapter and Code Block plugin.**  
+- **It is important that you use the STABLE BRANCH of this build, not the master branch.**
 
-## Documentation
-
-Please check CKEditor 5 Editor official documentation:
-
--   [Documentation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html)
--   [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html)
--   [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html)
--   [Creating custom builds](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html)
--   [React](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html)
+## What's Included
+- [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html)
+- [Code Block](https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html)
 
 ## Quick start
 
@@ -132,4 +126,6 @@ npm i ckeditor5-build-classic-simple-upload-adapter
 </script>
 ```
 
-**Note:** If you are planning to integrate CKEditor 5 deep into your application, it is actually more convenient and recommended to install and import the source modules directly (like it happens in `ckeditor.js`). Read more in the [Advanced setup guide](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html).
+## CKEditor 5 Official Resources
+
+-   [CKEditor 5](https://ckeditor.com/)

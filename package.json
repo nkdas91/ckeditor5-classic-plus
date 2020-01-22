@@ -1,7 +1,7 @@
 {
 	"name": "@ckeditor/ckeditor5-build-classic-plus",
 	"version": "1.0.0",
-	"description": "CKEditor 5 Classic Build with Simple Upload Adapter and Code Block",
+	"description": "CKEditor 5 Build - Classic Plus with Simple Upload Adapter and Code Block plugin",
 	"keywords": [
 		"ckeditor5-build",
 		"ckeditor",
@@ -20,7 +20,9 @@
 		"real-time",
 		"framework",
 		"simple upload adapter",
-		"code block"
+    "code block",
+    "ckeditor5-build-classic",
+    "ckeditor5-build-classic-plus"
 	],
 	"main": "./build/ckeditor.js",
 	"files": [
@@ -67,13 +69,13 @@
 		"node": ">=8.0.0",
 		"npm": ">=5.7.1"
 	},
-	"author": "Neeraj Kumar Das (https://neerajdas.com), CKSource (http://cksource.com/)",
+	"author": "Neeraj Kumar Das (https://github.com/nkdas91), CKSource (http://cksource.com/)",
 	"license": "GPL-2.0-or-later",
-	"homepage": "https://github.com/nkdas91/ckeditor5-build-classic-simple-upload-adapter",
-	"bugs": "https://github.com/nkdas91/ckeditor5-build-classic-simple-upload-adapter/issues",
+	"homepage": "https://github.com/nkdas91/ckeditor5-build-classic-plus",
+	"bugs": "https://github.com/nkdas91/ckeditor5-build-classic-plus/issues",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nkdas91/ckeditor5-build-classic-simple-upload-adapter.git"
+		"url": "https://github.com/nkdas91/ckeditor5-build-classic-plus.git"
 	},
 	"scripts": {
 		"build": "webpack --mode production",
