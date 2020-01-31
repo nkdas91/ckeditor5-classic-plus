@@ -1,7 +1,7 @@
 {
 	"name": "ckeditor5-classic-plus",
-	"version": "1.0.2",
-	"description": "CKEditor 5 - Build Classic with Simple Upload Adapter and Code Block plugin",
+	"version": "1.0.3",
+	"description": "CKEditor 5 - Build Classic with Code Block, Horizontal Line and Simple Upload Adapter",
 	"keywords": [
 		"ckeditor5-build",
 		"ckeditor",
@@ -20,12 +20,12 @@
 		"real-time",
 		"framework",
 		"simple upload adapter",
-    "code block",
-    "ckeditor5-build-classic",
-    "ckeditor5-build-classic-plus",
-    "ckeditor5-classic-plus",
-    "ckeditor5-react",
-    "wysiwyg for React"
+		"code block",
+		"ckeditor5-build-classic",
+		"ckeditor5-build-classic-plus",
+		"ckeditor5-classic-plus",
+		"ckeditor5-react",
+		"wysiwyg for React"
 	],
 	"main": "./build/ckeditor.js",
 	"files": [
@@ -45,6 +45,7 @@
 		"@ckeditor/ckeditor5-editor-classic": "^16.0.0",
 		"@ckeditor/ckeditor5-essentials": "^16.0.0",
 		"@ckeditor/ckeditor5-heading": "^16.0.0",
+		"@ckeditor/ckeditor5-horizontal-line": "^16.0.0",
 		"@ckeditor/ckeditor5-image": "^16.0.0",
 		"@ckeditor/ckeditor5-indent": "^16.0.0",
 		"@ckeditor/ckeditor5-link": "^16.0.0",

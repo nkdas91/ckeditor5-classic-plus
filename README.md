@@ -1,14 +1,16 @@
-# CKEditor 5 Build - Classic Plus
+# CKEditor 5 - Classic Plus
 [![npm version](https://badge.fury.io/js/ckeditor5-classic-plus.svg)](https://badge.fury.io/js/ckeditor5-classic-plus)
 
 ### Very Important Notes:
 
-- **This is a CUSTOM BUILD of CKEditor 5 Build - Classic with Simple Upload Adapter and Code Block plugin.**  
+- **This is a CUSTOM BUILD of CKEditor 5 Build - Classic with Code Block, Horizontal Line and Simple Upload Adapter.**  
 - **It is important that you use the STABLE BRANCH of this build, not the master branch.**
 
 ## What's Included
-- [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html)
 - [Code Block](https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html)
+- [Horizontal Line](https://ckeditor.com/docs/ckeditor5/latest/features/horizontal-line.html)
+- [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html)
+
 
 ## Quick start
 
