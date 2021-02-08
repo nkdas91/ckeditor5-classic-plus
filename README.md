@@ -1,70 +1,133 @@
-CKEditor 5 classic editor build
-========================================
+# CKEditor 5 - Classic Plus
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-build-classic.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic)
-[![Dependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic)
-[![devDependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/dev-status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic?type=dev)
+### Very Important Notes:
 
-The classic editor build for CKEditor 5. Read more about the [classic editor build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) and see the [demo](https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html).
+- **This is a CUSTOM BUILD of CKEditor 5 Build - Classic with Code Block, Horizontal Line and Simple Upload Adapter.**  
+- **It is important that you use the STABLE BRANCH of this build, not the master branch.**
 
-![CKEditor 5 classic editor build screenshot](https://c.cksource.com/a/1/img/npm/ckeditor5-build-classic.png)
+## What's Included
+- [Code Block](https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html)
+- [Horizontal Line](https://ckeditor.com/docs/ckeditor5/latest/features/horizontal-line.html)
+- [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html)
 
-## Documentation
-
-See:
-
-* [Installation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html) for how to install this package and what it contains.
-* [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html) for how to create an editor and interact with it.
-* [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html) for how to configure the editor.
-* [Creating custom builds](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) for how to customize the build (configure and rebuild the editor bundle).
 
 ## Quick start
 
-First, install the build from npm:
+### React
+
+Installation
 
 ```bash
-npm install --save @ckeditor/ckeditor5-build-classic
+npm i @ckeditor/ckeditor5-react
+npm i ckeditor5-classic-plus
 ```
 
-And use it in your website:
+```js
+import React, { useState } from "react";
+import CKEditor from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "ckeditor5-classic-plus";
+
+export default function MyEditor() {
+  const [article, setArticle] = useState();
+  
+  return (
+    <CKEditor
+      editor={ClassicEditor}
+      data={article}
+      onInit={editor => {
+        // You can store the "editor" and use when it is needed.
+      }}
+      onChange={(event, editor) => {
+        const data = editor.getData();
+        setArticle(data);
+      }}
+      config={{
+        simpleUpload: {
+          // The URL that the images are uploaded to.
+          uploadUrl: "http://example.com",
+
+          // Headers sent along with the XMLHttpRequest to the upload server.
+          headers: {
+            "X-CSRF-TOKEN": "CSFR-Token",
+            Authorization: "Bearer <JSON Web Token>"
+          }
+        }
+      }}
+    />
+  );
+}
+```
+
+### JS
+
+Installation
+
+```bash
+npm i ckeditor5-classic-plus
+```
+
+```js
+import ClassicEditor from 'ckeditor5-classic-plus';
+
+// Or using the CommonJS version:
+// const ClassicEditor = require('ckeditor5-classic-plus');
+
+ClassicEditor
+  .create(document.querySelector('#editor'), {
+  simpleUpload: {
+      // The URL that the images are uploaded to.
+      uploadUrl: "http://example.com",
+
+      // Headers sent along with the XMLHttpRequest to the upload server.
+      headers: {
+        "X-CSRF-TOKEN": "CSFR-Token",
+        Authorization: "Bearer <JSON Web Token>"
+      }
+    }
+  })
+  .then( editor => {
+    window.editor = editor;
+  })
+  .catch( err => {
+    console.error(err.stack);
+  });
+```
+
+### HTML
+
+Installation
+
+```bash
+npm i ckeditor5-classic-plus
+```
 
 ```html
 <div id="editor">
-	<p>This is the editor content.</p>
+  <p>This is the editor content.</p>
 </div>
-<script src="./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+<script src="./node_modules/ckeditor5-classic-plus/build/ckeditor.js"></script>
 <script>
-	ClassicEditor
-		.create( document.querySelector( '#editor' ) )
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( error => {
-			console.error( 'There was a problem initializing the editor.', error );
-		} );
+  ClassicEditor.create(document.querySelector("#editor"), {
+    simpleUpload: {
+      // The URL that the images are uploaded to.
+      uploadUrl: "http://example.com/",
+
+      // Headers sent along with the XMLHttpRequest to the upload server.
+      headers: {
+        "X-CSRF-TOKEN": "CSFR-Token",
+        Authorization: "Bearer <JSON Web Token>"
+      }
+    }
+  })
+  .then(editor => {
+    window.editor = editor;
+  })
+  .catch(err => {
+    console.error(err.stack);
+  });
 </script>
 ```
 
-Or in your JavaScript application:
+## CKEditor 5 Official Resources
 
-```js
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-
-// Or using the CommonJS version:
-// const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic' );
-
-ClassicEditor
-	.create( document.querySelector( '#editor' ) )
-	.then( editor => {
-		window.editor = editor;
-	} )
-	.catch( error => {
-		console.error( 'There was a problem initializing the editor.', error );
-	} );
-```
-
-**Note:** If you are planning to integrate CKEditor 5 deep into your application, it is actually more convenient and recommended to install and import the source modules directly (like it happens in `ckeditor.js`). Read more in the [Advanced setup guide](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html).
-
-## License
-
-Licensed under the terms of [GNU General Public License Version 2 or later](http://www.gnu.org/licenses/gpl.html). For full details about the license, please check the `LICENSE.md` file or [https://ckeditor.com/legal/ckeditor-oss-license](https://ckeditor.com/legal/ckeditor-oss-license).
+- [CKEditor 5](https://ckeditor.com/)
