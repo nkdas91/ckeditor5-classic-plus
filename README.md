@@ -23,7 +23,7 @@ npm i ckeditor5-classic-plus
 
 ```js
 import React, { useState } from "react";
-import CKEditor from "@ckeditor/ckeditor5-react";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "ckeditor5-classic-plus";
 
 export default function MyEditor() {
