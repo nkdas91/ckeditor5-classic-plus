@@ -1,9 +1,8 @@
 # CKEditor 5 - Classic Plus
 
-### Very Important Notes:
+***NOTE:** This is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor)*
 
-- **This is a CUSTOM BUILD of CKEditor 5 Build - Classic with Code Block, Horizontal Line and Simple Upload Adapter.**  
-- **It is important that you use the STABLE BRANCH of this build, not the master branch.**
+***UPDATE:** If you are looking for an easy way to create a custom build of [CKEditor 5](https://ckeditor.com/), check the [online builder](https://ckeditor.com/ckeditor-5/online-builder/), which allows you to easily create a custom build through a simple and intuitive UI.*
 
 ## What's Included
 - [Code Block](https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html)
@@ -127,7 +126,3 @@ npm i ckeditor5-classic-plus
   });
 </script>
 ```
-
-## CKEditor 5 Official Resources
-
-- [CKEditor 5](https://ckeditor.com/)
