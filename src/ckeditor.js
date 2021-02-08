@@ -30,6 +30,11 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
+// Added plugins
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -56,7 +61,10 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+    CodeBlock,
+    HorizontalLine,
+    SimpleUploadAdapter
 ];
 
 // Editor configuration.
@@ -67,17 +75,20 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
-			'link',
 			'bulletedList',
 			'numberedList',
 			'|',
 			'indent',
 			'outdent',
 			'|',
-			'imageUpload',
+            'horizontalLine',
+            'codeBlock',
 			'blockQuote',
-			'insertTable',
+			'link',
+            'imageUpload',
 			'mediaEmbed',
+            'insertTable',
+			'|',
 			'undo',
 			'redo'
 		]
