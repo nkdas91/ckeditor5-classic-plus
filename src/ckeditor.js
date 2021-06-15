@@ -36,6 +36,12 @@ import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import Font from '@ckeditor/ckeditor5-font/src/font';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -47,6 +53,12 @@ ClassicEditor.builtinPlugins = [
 	Font,
 	Bold,
 	Italic,
+	Underline,
+	Strikethrough,
+	Code,
+	Subscript,
+	Superscript,
+    Alignment,
 	BlockQuote,
 	CKFinder,
     CloudServices,
@@ -77,30 +89,40 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+            'fontFamily',
 			'fontSize',
-			'fontFamily',
-			'fontColor',
-			'fontBackgroundColor',
+            'fontColor',
+            'fontBackgroundColor',
 			'|',
-			'bold',
-			'italic',
-			'bulletedList',
-			'numberedList',
+            'bold',
+            'italic',
+            'underline',
+            'strikethrough',
+            'subscript',
+            'superscript',
+            'code',
 			'|',
-			'indent',
-			'outdent',
+			'alignment',
 			'|',
+            'bulletedList',
+            'numberedList',
+			'|',
+            'indent',
+            'outdent',
+            '|',
             'horizontalLine',
             'codeBlock',
 			'blockQuote',
-			'link',
+            'insertTable',
+            '|',
+            'link',
             'uploadImage',
 			'mediaEmbed',
-            'insertTable',
 			'|',
 			'undo',
 			'redo'
-		]
+		],
+        shouldNotGroupWhenFull: true
 	},
 	image: {
 		toolbar: [
