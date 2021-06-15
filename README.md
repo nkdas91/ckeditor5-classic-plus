@@ -4,11 +4,13 @@
 
 ***UPDATE:** If you are looking for an easy way to create a custom build of [CKEditor 5](https://ckeditor.com/), check the [online builder](https://ckeditor.com/ckeditor-5/online-builder/), which allows you to easily create a custom build through a simple and intuitive UI.*
 
-## What's Included
+## What's added to the official build?
+- [Basic Text Styles](https://ckeditor.com/docs/ckeditor5/latest/features/basic-styles.html)
+- [Text Alignment](https://ckeditor.com/docs/ckeditor5/latest/features/text-alignment.html)
+- [Font](https://ckeditor.com/docs/ckeditor5/latest/features/font.html)
 - [Code Block](https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html)
 - [Horizontal Line](https://ckeditor.com/docs/ckeditor5/latest/features/horizontal-line.html)
 - [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html)
-
 
 ## Quick start
 
