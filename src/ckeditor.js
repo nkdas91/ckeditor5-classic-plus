@@ -29,6 +29,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 
 // Added plugins
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
@@ -46,6 +47,7 @@ ClassicEditor.builtinPlugins = [
 	Italic,
 	BlockQuote,
 	CKFinder,
+    CloudServices,
 	EasyImage,
 	Heading,
 	Image,
@@ -85,7 +87,7 @@ ClassicEditor.defaultConfig = {
             'codeBlock',
 			'blockQuote',
 			'link',
-            'imageUpload',
+            'uploadImage',
 			'mediaEmbed',
             'insertTable',
 			'|',
@@ -95,10 +97,10 @@ ClassicEditor.defaultConfig = {
 	},
 	image: {
 		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
-			'|',
-			'imageTextAlternative'
+            'imageStyle:full',
+            'imageStyle:side',
+            '|',
+            'imageTextAlternative'
 		]
 	},
 	table: {
