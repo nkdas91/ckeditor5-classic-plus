@@ -1,7 +1,7 @@
 {
   "name": "ckeditor5-classic-plus",
   "version": "1.0.5",
-  "description": "CKEditor 5 - Build Classic with Code Block, Horizontal Line and Simple Upload Adapter",
+  "description": "CKEditor 5 - Build Classic with Simple Upload Adapter, Image Resize, Font Styling and much more.",
   "keywords": [
     "ckeditor5-build",
     "ckeditor",
