@@ -32,9 +32,6 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 
 // Added plugins
-import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
-import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
-import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
@@ -42,6 +39,9 @@ import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
