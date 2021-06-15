@@ -11,6 +11,8 @@
 - [Code Block](https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html)
 - [Horizontal Line](https://ckeditor.com/docs/ckeditor5/latest/features/horizontal-line.html)
 - [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html)
+- [Image Link](https://ckeditor.com/docs/ckeditor5/latest/features/image.html#linking-images)
+- [Image Resize](https://ckeditor.com/docs/ckeditor5/latest/features/image.html#resizing-images)
 
 ## Quick start
 

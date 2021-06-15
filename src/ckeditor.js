@@ -42,6 +42,8 @@ import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -69,8 +71,10 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageResize,
 	Indent,
 	Link,
+	LinkImage,
 	List,
 	MediaEmbed,
 	Paragraph,
@@ -125,11 +129,45 @@ ClassicEditor.defaultConfig = {
         shouldNotGroupWhenFull: true
 	},
 	image: {
+		// Configure the available styles.
+		styles: [
+			'alignLeft', 'alignCenter', 'alignRight'
+		],
+
+		// Configure the available image resize options.
+		resizeOptions: [
+			{
+				name: 'resizeImage:original',
+				label: 'Original',
+				value: null
+			},
+			{
+				name: 'resizeImage:75',
+				label: '75%',
+				value: '75'
+			},
+			{
+				name: 'resizeImage:50',
+				label: '50%',
+				value: '50'
+			},
+			{
+				name: 'resizeImage:25',
+				label: '25%',
+				value: '25'
+			}
+		],
+
 		toolbar: [
-            'imageStyle:full',
-            'imageStyle:side',
+			'resizeImage',
+			'|',
+			'imageStyle:alignLeft',
+			'imageStyle:alignCenter',
+			'imageStyle:alignRight',
             '|',
-            'imageTextAlternative'
+			'linkImage',
+			'|',
+			'imageTextAlternative'
 		]
 	},
 	table: {
