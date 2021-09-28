@@ -41,7 +41,7 @@ export default function MyEditor() {
     <CKEditor
       editor={ClassicEditor}
       data={article}
-      onInit={editor => {
+      onReady={editor => {
         // You can store the "editor" and use when it is needed.
       }}
       onChange={(event, editor) => {
@@ -52,6 +52,9 @@ export default function MyEditor() {
         simpleUpload: {
           // The URL that the images are uploaded to.
           uploadUrl: "http://example.com",
+          
+          // Enable the XMLHttpRequest.withCredentials property if required.
+          withCredentials: true,
 
           // Headers sent along with the XMLHttpRequest to the upload server.
           headers: {
@@ -64,6 +67,10 @@ export default function MyEditor() {
   );
 }
 ```
+
+CKEditor 5 React documentation: [https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html)  
+
+Simple upload adapter documentation: [https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/simple-upload-adapter.html](https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/simple-upload-adapter.html)
 
 ### JS
 
@@ -86,6 +93,9 @@ ClassicEditor
   simpleUpload: {
       // The URL that the images are uploaded to.
       uploadUrl: "http://example.com",
+      
+      // Enable the XMLHttpRequest.withCredentials property if required.
+      withCredentials: true,
 
       // Headers sent along with the XMLHttpRequest to the upload server.
       headers: {
@@ -122,6 +132,9 @@ Usage
     simpleUpload: {
       // The URL that the images are uploaded to.
       uploadUrl: "http://example.com/",
+      
+      // Enable the XMLHttpRequest.withCredentials property if required.
+      withCredentials: true,
 
       // Headers sent along with the XMLHttpRequest to the upload server.
       headers: {
@@ -138,3 +151,9 @@ Usage
   });
 </script>
 ```
+
+## CKEditor 5 official documentation
+* [Installation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html) for how to install this package and what it contains.
+* [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html) for how to create an editor and interact with it.
+* [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html) for how to configure the editor.
+* [Creating custom builds](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) for how to customize the build (configure and rebuild the editor bundle).
