@@ -1,6 +1,6 @@
 # CKEditor 5 - Classic Plus
 
-***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) (version: 29.1.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
+***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) (version: 29.2.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
 
 ![alt text](https://neerajdas.com/assets/images/ckeditor.png)
 
@@ -26,6 +26,8 @@ Installation
 npm i @ckeditor/ckeditor5-react
 npm i ckeditor5-classic-plus
 ```
+
+Usage
 
 ```js
 import React, { useState } from "react";
@@ -71,6 +73,8 @@ Installation
 npm i ckeditor5-classic-plus
 ```
 
+Usage
+
 ```js
 import ClassicEditor from 'ckeditor5-classic-plus';
 
@@ -105,6 +109,8 @@ Installation
 ```bash
 npm i ckeditor5-classic-plus
 ```
+
+Usage
 
 ```html
 <div id="editor">
