@@ -2,7 +2,9 @@
 
 ***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) (version: 30.0.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
 
-![alt text](https://neerajdas.com/assets/images/ckeditor.png)
+[![Live demo button](https://neerajdas.com/assets/images/live_demo_button.png)](https://neerajdas.com/ckeditor5-classic-plus/)
+
+![CKEditor 5 - Classic Plus sample image](https://neerajdas.com/assets/images/ckeditor.png)
 
 ***Note,** If you are looking for an easy way to create a custom build of [CKEditor 5](https://ckeditor.com/), check the [online builder](https://ckeditor.com/ckeditor-5/online-builder/), which allows you to easily create a custom build through a simple and intuitive UI.*
 
