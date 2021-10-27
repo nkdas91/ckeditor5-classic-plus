@@ -125,7 +125,7 @@ npm i ckeditor5-classic-plus
 OR You may use the CDN
 
 ```bash
-https://unpkg.com/ckeditor5-classic-plus@1.0.8/build/ckeditor.js
+https://unpkg.com/ckeditor5-classic-plus@2.0.0/build/ckeditor.js
 ```
 
 Usage
@@ -137,7 +137,7 @@ Usage
 <script src="./node_modules/ckeditor5-classic-plus/build/ckeditor.js"></script>
 
 <!--Using CDN-->
-<!--<script src="https://unpkg.com/ckeditor5-classic-plus@1.0.8/build/ckeditor.js"></script>-->
+<!--<script src="https://unpkg.com/ckeditor5-classic-plus@2.0.0/build/ckeditor.js"></script>-->
 
 <script>
   ClassicEditor.create(document.querySelector("#editor"), {
