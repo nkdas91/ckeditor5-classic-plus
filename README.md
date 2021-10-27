@@ -17,6 +17,7 @@
 - [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html)
 - [Image Link](https://ckeditor.com/docs/ckeditor5/latest/features/image.html#linking-images)
 - [Image Resize](https://ckeditor.com/docs/ckeditor5/latest/features/image.html#resizing-images)
+- [Find And Replace](https://ckeditor.com/docs/ckeditor5/latest/features/find-and-replace.html)
 
 ## Quick start
 

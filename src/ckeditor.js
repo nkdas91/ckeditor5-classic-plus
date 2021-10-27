@@ -44,6 +44,7 @@ import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalli
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import FindAndReplace from '@ckeditor/ckeditor5-find-and-replace/src/findandreplace';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -84,7 +85,8 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation,
     CodeBlock,
     HorizontalLine,
-    SimpleUploadAdapter
+    SimpleUploadAdapter,
+	FindAndReplace
 ];
 
 // Editor configuration.
@@ -124,7 +126,8 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'|',
 			'undo',
-			'redo'
+			'redo',
+			'findAndReplace'
 		],
         shouldNotGroupWhenFull: true
 	},
