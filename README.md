@@ -1,6 +1,6 @@
 # CKEditor 5 - Classic Plus
 
-***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) (version: 31.0.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
+***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) (version: 31.1.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
 
 [![Live demo button](https://neerajdas.com/assets/images/live_demo_button.png)](https://neerajdas.com/ckeditor5-classic-plus/)
 
@@ -107,11 +107,11 @@ ClassicEditor
       }
     }
   })
-  .then( editor => {
+  .then(editor => {
     window.editor = editor;
   })
-  .catch( err => {
-    console.error(err.stack);
+  .catch(error => {
+    console.error('There was a problem initializing the editor.', error);
   });
 ```
 
@@ -126,7 +126,7 @@ npm i ckeditor5-classic-plus
 OR You may use the CDN
 
 ```bash
-https://unpkg.com/ckeditor5-classic-plus@2.0.0/build/ckeditor.js
+https://unpkg.com/ckeditor5-classic-plus@31.1.0/build/ckeditor.js
 ```
 
 Usage
@@ -138,7 +138,7 @@ Usage
 <script src="./node_modules/ckeditor5-classic-plus/build/ckeditor.js"></script>
 
 <!--Using CDN-->
-<!--<script src="https://unpkg.com/ckeditor5-classic-plus@2.0.0/build/ckeditor.js"></script>-->
+<!--<script src="https://unpkg.com/ckeditor5-classic-plus@31.1.0/build/ckeditor.js"></script>-->
 
 <script>
   ClassicEditor.create(document.querySelector("#editor"), {
@@ -159,8 +159,8 @@ Usage
   .then(editor => {
     window.editor = editor;
   })
-  .catch(err => {
-    console.error(err.stack);
+  .catch(error => {
+    console.error('There was a problem initializing the editor.', error);
   });
 </script>
 ```
