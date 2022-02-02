@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -8,7 +8,24 @@
 'use strict';
 
 module.exports = {
+	extends: 'ckeditor5',
 	rules: {
-		'ckeditor5-rules/ckeditor-imports': 'off'
-	}
+		'ckeditor5-rules/ckeditor-imports': 'error'
+	},
+	overrides: [
+		{
+			files: [ '**/tests/**/*.js' ],
+			rules: {
+				'no-unused-expressions': 'off',
+				'ckeditor5-rules/ckeditor-imports': 'off',
+				'ckeditor5-rules/no-cross-package-imports': 'off'
+			}
+		},
+		{
+			files: [ '**/docs/**/*.js' ],
+			rules: {
+				'ckeditor5-rules/ckeditor-imports': 'off'
+			}
+		}
+	]
 };
