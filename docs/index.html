@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CKEditor 5 – Classic Plus</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+	<div class="row p-5">
+		<div class="col">
+			<h1 class="mb-4">CKEditor 5 – Classic Plus v32.0.0</h1>
+
+			<div class="alert alert-primary mb-4" role="alert">
+				Please Note, File upload won't work in this demo.
+			</div>
+
+			<div id="editor"></div>
+		</div>
+	</div>
+</div>
+
+<script src="https://unpkg.com/ckeditor5-classic-plus@32.0.0/build/ckeditor.js"></script>
+
+<script>
+	ClassicEditor.create(document.querySelector('#editor'), {
+		simpleUpload: {
+			// The URL that the images are uploaded to.
+			uploadUrl: "http://example.com/",
+
+			// Enable the XMLHttpRequest.withCredentials property if required.
+			withCredentials: true,
+
+			// Headers sent along with the XMLHttpRequest to the upload server.
+			headers: {
+				"X-CSRF-TOKEN": "CSFR-Token",
+				Authorization: "Bearer <JSON Web Token>"
+			}
+		}
+	})
+		.then(editor => {
+			window.editor = editor;
+		})
+		.catch(error => {
+			console.error('There was a problem initializing the editor.', error);
+		});
+</script>
+
+</body>
+</html>
