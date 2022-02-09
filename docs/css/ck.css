@@ -1,0 +1,40 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.15rem;
+	color: #212121;
+}
+h1 {
+	font-size: 3rem;
+	font-weight: 100;
+	color: #6f42c1;
+}
+@keyframes brand-gradient {
+	0% {
+		background-position: 0 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	to {
+		background-position: 0 50%
+	}
+}
+.neeraj {
+	font-family: adventure, script;
+	background: linear-gradient(141.27deg, #ff904e -4.24%, #ff5982 21.25%, #ec68f4 44.33%, #26C6DA 83.46%);
+	background-size: 200%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-animation: brand-gradient 5s ease infinite;
+	animation: brand-gradient 5s ease infinite;
+	-webkit-text-fill-color: transparent;
+}
+.social-links {
+	width: 30px;
+}
+pre {
+	border-radius: .3rem;
+}
+a {
+	text-decoration: none;
+}

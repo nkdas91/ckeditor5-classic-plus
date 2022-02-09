@@ -3,86 +3,211 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="CKEditor 5 Classic Plus is a Custom Build built on top of CKEditor 5 Build - Classic (version: 32.0.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.">
+	<meta name="theme-color" content="#6f42c1"/>
+
+	<meta property="og:url" content="https://neerajdas.com/ckeditor5-classic-plus/"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="CKEditor 5 – Classic Plus"/>
+	<meta property="og:description" content="CKEditor 5 Classic Plus is a Custom Build built on top of CKEditor 5 Build - Classic (version: 32.0.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build."/>
+
 	<title>CKEditor 5 – Classic Plus</title>
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Mono:400,500,700&display=swap"
-		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Mono:400,500,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.typekit.net/fqx2tla.css">
-
-	<style>
-		body {
-			font-family: 'Roboto', sans-serif;
-			font-size: 1.15rem;
-			color: #212121;
-		}
-
-		h1 {
-			font-size: 3rem;
-		}
-
-		h1, h4 {
-			font-weight: 100;
-		}
-
-		@keyframes brand-gradient {
-			0% {
-				background-position: 0 50%
-			}
-			50% {
-				background-position: 100% 50%
-			}
-			to {
-				background-position: 0 50%
-			}
-		}
-
-		.neeraj {
-			font-family: adventure, script;
-			background: linear-gradient(141.27deg, #ff904e -4.24%, #ff5982 21.25%, #ec68f4 44.33%, #26C6DA 83.46%);
-			background-size: 200%;
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-animation: brand-gradient 5s ease infinite;
-			animation: brand-gradient 5s ease infinite;
-			-webkit-text-fill-color: transparent;
-		}
-
-		.social-links {
-			width: 30px;
-		}
-	</style>
+	<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/github-dark-dimmed.min.css">
+	<link rel="stylesheet" href="css/ck.css">
 </head>
 <body>
 
 <div class="container">
 	<div class="row">
 		<div class="col">
-			<h1 class="mt-5">CKEditor 5 – Classic Plus</h1>
-			<h4 class="text-secondary">v32.0.0</h4>
-			<div class="alert alert-info my-4 border-0 rounded-0" role="alert">
-				Please Note, File upload won't work in this demo.
+			<div class="my-5">
+				<h1 class="mb-0">CKEditor 5 – Classic Plus</h1>
+				<label class="text-secondary fs-5">v32.0.0</label>
+			</div>
+
+			<p>
+				CKEditor 5 Classic Plus is a Custom Build built on top of CKEditor 5 Build - Classic (version: 32.0.0).<br>
+				It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.
+			</p>
+
+			<h3 class="mt-4">Live demo</h3>
+
+			<div class="alert alert-primary py-2 mb-0 border-0 rounded-0" role="alert">
+				Please note, File upload won't work in this demo.
 			</div>
 
 			<div id="editor"></div>
 
-			<footer class="my-4">
+			<p class="mt-4">
+				Note, If you are looking for an easy way to create a custom build of
+				<a href="https://ckeditor.com/">CKEditor 5</a>,
+				check the <a href="https://ckeditor.com/ckeditor-5/online-builder/">online builder</a>,
+				which allows you to easily create a custom build through a simple and intuitive UI.
+			</p>
+
+			<h3 class="mt-4">What's added to the official build?</h3>
+			<ul>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/basic-styles.html">Basic Text Styles</a></li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/text-alignment.html">Text Alignment</a></li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/font.html">Font</a></li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html">Code Block</a></li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/horizontal-line.html">Horizontal Line</a></li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html">Simple Upload Adapter</a></li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/image.html#linking-images">Image Link</a></li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/image.html#resizing-images">Image Resize</a></li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/find-and-replace.html">Find And Replace</a></li>
+			</ul>
+
+			<h3 class="mt-5">Quick start</h3>
+			<h4>React</h4>
+			<label>Installation</label>
+			<pre><code class="language-bash">npm i @ckeditor/ckeditor5-react
+npm i ckeditor5-classic-plus</code></pre>
+
+			<label>Usage</label>
+			<pre><code class="language-javascript">import React, { useState } from &quot;react&quot;;
+import { CKEditor } from &quot;@ckeditor/ckeditor5-react&quot;;
+import ClassicEditor from &quot;ckeditor5-classic-plus&quot;;
+
+export default function MyEditor() {
+  const [article, setArticle] = useState();
+
+  return (
+    &lt;CKEditor
+      editor={ClassicEditor}
+      data={article}
+      onReady={editor =&gt; {
+        // You can store the &quot;editor&quot; and use when it is needed.
+      }}
+      onChange={(event, editor) =&gt; {
+        const data = editor.getData();
+        setArticle(data);
+      }}
+      config={{
+        simpleUpload: {
+          // The URL that the images are uploaded to.
+          uploadUrl: &quot;http://example.com&quot;,
+
+          // Enable the XMLHttpRequest.withCredentials property if required.
+          withCredentials: true,
+
+          // Headers sent along with the XMLHttpRequest to the upload server.
+          headers: {
+            &quot;X-CSRF-TOKEN&quot;: &quot;CSFR-Token&quot;,
+            Authorization: &quot;Bearer [JSON Web Token]&quot;
+          }
+        }
+      }}
+    /&gt;
+  );
+}</code></pre>
+
+			<label>Reference:</label><br>
+			<a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html">CKEditor 5 React documentation</a><br>
+			<a href="https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/simple-upload-adapter.html">Simple upload adapter documentation</a>
+
+			<h4 class="mt-5">JS</h4>
+			<label>Installation</label>
+			<pre><code class="language-bash">npm i ckeditor5-classic-plus</code></pre>
+
+			<label>Usage</label>
+			<pre><code class="language-javascript">import ClassicEditor from 'ckeditor5-classic-plus';
+
+// Or using the CommonJS version:
+// const ClassicEditor = require('ckeditor5-classic-plus');
+
+ClassicEditor
+  .create(document.querySelector('#editor'), {
+    simpleUpload: {
+      // The URL that the images are uploaded to.
+      uploadUrl: "http://example.com",
+
+      // Enable the XMLHttpRequest.withCredentials property if required.
+      withCredentials: true,
+
+      // Headers sent along with the XMLHttpRequest to the upload server.
+      headers: {
+        "X-CSRF-TOKEN": "CSFR-Token",
+        Authorization: "Bearer [JSON Web Token]"
+      }
+    }
+  })
+  .then(editor => {
+    window.editor = editor;
+  })
+  .catch(error => {
+    console.error('There was a problem initializing the editor.', error);
+  });</code></pre>
+
+			<h4 class="mt-5">HTML</h4>
+			<label>Installation using NPM</label>
+			<pre><code class="language-bash">npm i ckeditor5-classic-plus</code></pre>
+			<label>OR You may use the CDN</label>
+			<pre><code class="language-bash">https://unpkg.com/ckeditor5-classic-plus@32.0.0/build/ckeditor.js</code></pre>
+
+			<label>Usage</label>
+			<pre><code class="language-xml">&lt;div id=&quot;editor&quot;&gt;
+  &lt;p&gt;This is the editor content.&lt;/p&gt;
+&lt;/div&gt;
+&lt;script src=&quot;./node_modules/ckeditor5-classic-plus/build/ckeditor.js&quot;&gt;&lt;/script&gt;
+
+&lt;!--Using CDN--&gt;
+&lt;!--&lt;script src=&quot;https://unpkg.com/ckeditor5-classic-plus@32.0.0/build/ckeditor.js&quot;&gt;&lt;/script&gt;--&gt;
+
+&lt;script&gt;
+  ClassicEditor.create(document.querySelector(&quot;#editor&quot;), {
+    simpleUpload: {
+      // The URL that the images are uploaded to.
+      uploadUrl: &quot;http://example.com/&quot;,
+
+      // Enable the XMLHttpRequest.withCredentials property if required.
+      withCredentials: true,
+
+      // Headers sent along with the XMLHttpRequest to the upload server.
+      headers: {
+        &quot;X-CSRF-TOKEN&quot;: &quot;CSFR-Token&quot;,
+        Authorization: &quot;Bearer [JSON Web Token]&quot;
+      }
+    }
+  })
+    .then(editor =&gt; {
+      window.editor = editor;
+    })
+    .catch(error =&gt; {
+      console.error('There was a problem initializing the editor.', error);
+    });
+&lt;/script&gt;</code></pre>
+
+			<h3 class="mt-4">CKEditor 5 official documentation</h3>
+			<ul>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html">Installation</a> for how to install this package and what it contains.</li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html">Basic API</a> for how to create an editor and interact with it.</li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html">Configuration</a> for how to configure the editor.</li>
+				<li><a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html">Creating custom builds</a> for how to customize the build (configure and rebuild the editor bundle).</li>
+			</ul>
+
+			<footer class="my-5">
 				<div class="d-flex justify-content-center align-items-center">
 					<div>
 						<a href="https://github.com/nkdas91/ckeditor5-classic-plus"
-						   class="p-2 link-secondary text-decoration-none"
+						   class="p-2 link-secondary"
 						   aria-label="CKEditor's GitHub url">
 							<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" viewBox="0 0 496 512" width="30px"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
 						</a>
 						<a href="https://www.npmjs.com/package/ckeditor5-classic-plus"
-						   class="p-2 link-secondary text-decoration-none"
+						   class="p-2 link-secondary"
 						   aria-label="CKEditor's npm url">
 							<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="npm" class="svg-inline--fa fa-npm fa-w-18" role="img" viewBox="0 0 576 512" width="50px"><path fill="currentColor" d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z"/></svg>
 						</a>
 					</div>
 				</div>
 				<div class="d-flex justify-content-center align-items-center text-secondary my-3">
-					Maintained by:&nbsp;
+					Custom build maintained by&nbsp;
 					<a class="neeraj fs-2" href="https://neerajdas.com/">
 						Neeraj Das
 					</a>
@@ -94,30 +219,35 @@
 </div>
 
 <script src="https://unpkg.com/ckeditor5-classic-plus@32.0.0/build/ckeditor.js"></script>
-
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
 <script>
-	ClassicEditor.create(document.querySelector('#editor'), {
-		simpleUpload: {
-			// The URL that the images are uploaded to.
-			uploadUrl: "http://example.com/",
+	document.addEventListener("DOMContentLoaded", function () {
+		ClassicEditor.create(document.querySelector('#editor'), {
+			simpleUpload: {
+				// The URL that the images are uploaded to.
+				uploadUrl: "http://example.com/",
 
-			// Enable the XMLHttpRequest.withCredentials property if required.
-			withCredentials: true,
+				// Enable the XMLHttpRequest.withCredentials property if required.
+				withCredentials: true,
 
-			// Headers sent along with the XMLHttpRequest to the upload server.
-			headers: {
-				"X-CSRF-TOKEN": "CSFR-Token",
-				Authorization: "Bearer <JSON Web Token>"
+				// Headers sent along with the XMLHttpRequest to the upload server.
+				headers: {
+					"X-CSRF-TOKEN": "CSFR-Token",
+					Authorization: "Bearer <JSON Web Token>"
+				}
 			}
-		}
-	})
-		.then(editor => {
-			window.editor = editor;
 		})
-		.catch(error => {
-			console.error('There was a problem initializing the editor.', error);
-		});
-</script>
+			.then(editor => {
+				window.editor = editor;
+			})
+			.catch(error => {
+				console.error('There was a problem initializing the editor.', error);
+			});
 
+		hljs.highlightAll();
+		anchors.add('h3, h4');
+	});
+</script>
 </body>
 </html>
