@@ -13,12 +13,27 @@
 
 	<title>CKEditor 5 – Classic Plus</title>
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Mono:400,500,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.typekit.net/fqx2tla.css">
-	<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/github-dark-dimmed.min.css">
-	<link rel="stylesheet" href="css/ck.css">
+	<link rel="preload"
+		  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+		  as="style"
+		  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"
+		  onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload"
+		  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Mono:400,500,700&display=swap"
+		  as="font"
+		  onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload"
+		  href="https://use.typekit.net/fqx2tla.css"
+		  as="style"
+		  onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload"
+		  href="https://unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/github-dark-dimmed.min.css"
+		  as="style"
+		  onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload"
+		  href="css/ck.css"
+		  as="style"
+		  onload="this.onload=null;this.rel='stylesheet'">
 </head>
 <body>
 
@@ -218,9 +233,9 @@ ClassicEditor
 	</div>
 </div>
 
-<script src="https://unpkg.com/ckeditor5-classic-plus@32.0.0/build/ckeditor.js"></script>
-<script src="https://unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script src="https://unpkg.com/ckeditor5-classic-plus@32.0.0/build/ckeditor.js" defer></script>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js" defer ></script>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js" defer></script>
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
 		ClassicEditor.create(document.querySelector('#editor'), {

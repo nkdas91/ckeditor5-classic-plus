@@ -21,6 +21,7 @@ h1 {
 }
 .neeraj {
 	font-family: adventure, script;
+	font-display: swap;
 	background: linear-gradient(141.27deg, #ff904e -4.24%, #ff5982 21.25%, #ec68f4 44.33%, #26C6DA 83.46%);
 	background-size: 200%;
 	-webkit-background-clip: text;
