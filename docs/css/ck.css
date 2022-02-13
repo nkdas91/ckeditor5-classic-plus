@@ -2,7 +2,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.15rem;
 	color: #212121;
-	background: #fff url('/ckeditor5-classic-plus/docs/images/dot-grid.png') fixed;
+	background: #fff url('../images/dot-grid.png') fixed;
 }
 h1 {
 	font-size: 4rem;
