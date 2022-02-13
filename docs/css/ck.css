@@ -2,9 +2,10 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.15rem;
 	color: #212121;
+	background: #fff url('/ckeditor5-classic-plus/docs/images/dot-grid.png') fixed;
 }
 h1 {
-	font-size: 3rem;
+	font-size: 4rem;
 	font-weight: 100;
 	color: #6f42c1;
 }
