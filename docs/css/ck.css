@@ -3,6 +3,8 @@ body {
 	font-size: 1.15rem;
 	color: #212121;
 	background: #fff url('../images/dot-grid.png') fixed;
+	border-top: 5px solid #6f42c1;
+	border-bottom: 5px solid #6f42c1;
 }
 h1 {
 	font-size: 4rem;
