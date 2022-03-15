@@ -1,6 +1,6 @@
 # CKEditor 5 - Classic Plus
 
-***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) (version: 32.0.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
+***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) (version: 33.0.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
 
 [![Live demo button](https://neerajdas.com/ckeditor5-classic-plus/images/live_demo_button.webp)](https://neerajdas.com/ckeditor5-classic-plus/)
 
@@ -126,7 +126,7 @@ npm i ckeditor5-classic-plus
 OR You may use the CDN
 
 ```bash
-https://unpkg.com/ckeditor5-classic-plus@32.0.0/build/ckeditor.js
+https://unpkg.com/ckeditor5-classic-plus@33.0.0/build/ckeditor.js
 ```
 
 Usage
@@ -138,7 +138,7 @@ Usage
 <script src="./node_modules/ckeditor5-classic-plus/build/ckeditor.js"></script>
 
 <!--Using CDN-->
-<!--<script src="https://unpkg.com/ckeditor5-classic-plus@32.0.0/build/ckeditor.js"></script>-->
+<!--<script src="https://unpkg.com/ckeditor5-classic-plus@33.0.0/build/ckeditor.js"></script>-->
 
 <script>
   ClassicEditor.create(document.querySelector("#editor"), {
