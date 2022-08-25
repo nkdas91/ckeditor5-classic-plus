@@ -8,6 +8,7 @@ body {
 }
 .dropdown-toggle {
 	background: #6f42c1;
+	border: 1px solid #6f42c1;
 }
 h1 {
 	font-size: 4rem;
