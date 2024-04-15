@@ -1,6 +1,6 @@
 # CKEditor 5 - Classic Plus
 
-***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) (version: 36.0.1). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
+***CKEditor 5 Classic Plus** is a [Custom Build](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html#creating-custom-builds) built on top of [CKEditor 5 Build - Classic](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor) (version: 41.3.0). It adds Simple Upload Adapter, Image Resize, Font Styling and much more to the official build.*
 
 [![Live demo button](https://neerajdas.com/ckeditor5-classic-plus/images/live_demo_button.webp)](https://neerajdas.com/ckeditor5-classic-plus/)
 
@@ -14,9 +14,9 @@
 - [Font](https://ckeditor.com/docs/ckeditor5/latest/features/font.html)
 - [Code Block](https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html)
 - [Horizontal Line](https://ckeditor.com/docs/ckeditor5/latest/features/horizontal-line.html)
-- [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/image-upload/simple-upload-adapter.html)
-- [Image Link](https://ckeditor.com/docs/ckeditor5/latest/features/image.html#linking-images)
-- [Image Resize](https://ckeditor.com/docs/ckeditor5/latest/features/image.html#resizing-images)
+- [Simple Upload Adapter](https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/simple-upload-adapter.html)
+- [Image Link](https://ckeditor.com/docs/ckeditor5/latest/features/images/images-overview.html#linking-images)
+- [Image Resize](https://ckeditor.com/docs/ckeditor5/latest/features/images/images-overview.html#resizing-images)
 - [Find And Replace](https://ckeditor.com/docs/ckeditor5/latest/features/find-and-replace.html)
 
 ## Quick start
@@ -71,9 +71,9 @@ export default function MyEditor() {
 }
 ```
 
-CKEditor 5 React documentation: [https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html)  
+[CKEditor 5 React documentation](https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/react.html)  
 
-Simple upload adapter documentation: [https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/simple-upload-adapter.html](https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/simple-upload-adapter.html)
+[Simple upload adapter documentation](https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/simple-upload-adapter.html)
 
 ### JS
 
@@ -127,14 +127,14 @@ OR You may use the CDN
 
 jsDelivr
 ```bash
-https://cdn.jsdelivr.net/npm/ckeditor5-classic-plus@36.0.1/build/ckeditor.js
+https://cdn.jsdelivr.net/npm/ckeditor5-classic-plus@41.3.0/build/ckeditor.js
 ```
 
 OR
 
 UNPKG
 ```bash
-https://unpkg.com/ckeditor5-classic-plus@36.0.1/build/ckeditor.js
+https://unpkg.com/ckeditor5-classic-plus@41.3.0/build/ckeditor.js
 ```
 
 Usage
@@ -146,7 +146,7 @@ Usage
 <script src="./node_modules/ckeditor5-classic-plus/build/ckeditor.js"></script>
 
 <!--Using CDN-->
-<!--<script src="https://unpkg.com/ckeditor5-classic-plus@36.0.1/build/ckeditor.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/ckeditor5-classic-plus@41.3.0/build/ckeditor.js"></script>-->
 
 <script>
   ClassicEditor.create(document.querySelector("#editor"), {
@@ -174,6 +174,6 @@ Usage
 ```
 
 ## CKEditor 5 official documentation
-* [Installation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/installation.html) for how to install this package and what it contains.
-* [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html) for how to create an editor and interact with it.
-* [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html) for how to configure the editor.
+* [Quick start](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html)
+* [Editor life cycle](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/editor-lifecycle.html)
+* [Configuration](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/configuration.html)
